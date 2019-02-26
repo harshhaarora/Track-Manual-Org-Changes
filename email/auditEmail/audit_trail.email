@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Alert! Manual changes made to the Org." recipientType="User" relatedToType="SetupAuditTrail">
+<messaging:htmlEmailBody >
+<c:AuditTrailEmailComponent />
+</messaging:htmlEmailBody>
+</messaging:emailTemplate>

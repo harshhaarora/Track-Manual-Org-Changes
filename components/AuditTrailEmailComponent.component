@@ -1,0 +1,20 @@
+<apex:component controller="AuditTrailEmailController" access="global">
+    <apex:image id="header" value="https://ci6.googleusercontent.com/proxy/Tojgcpm-k2HRB9tQ9jPehdCitEY7dDO-921To0b2ZHJ-6o2vES9zq9KF4h_Ox0onjTrxHZFdNWMEmrRLFBGNE1GF-8VFt3ClTgJrk8DO2TMhXY-SCnyaXB8=s0-d-e1-ft#http://thecloud.appirio.com/rs/921-UOU-112/images/Header_ADE-Jul17.png" height="120px" width="100%"/>
+    <h3>Following changes have been made to the Org: {!org.name}</h3>
+    <apex:dataTable value="{!DailyAudit}" var="auditTrail" rendered="{!isData}">
+		<apex:column style="padding:5px; ">
+            <apex:facet name="header">Date</apex:facet>
+            {!DailyAudit[auditTrail].CreatedDate}
+        </apex:column>
+        <apex:column style="padding:5px; ">
+            <apex:facet name="header">User</apex:facet>
+            {!DailyAudit[auditTrail].CreatedBy.Name}
+        </apex:column>
+        <apex:column style="padding:5px; ">
+            <apex:facet name="header">Action</apex:facet>
+            {!DailyAudit[auditTrail].Display}
+        </apex:column>
+    </apex:dataTable>
+    <apex:outputText rendered="{!!isData}">No change made today!</apex:outputText>
+	<apex:image id="footer" value="https://ci3.googleusercontent.com/proxy/vGgZhreERfTuLel5KWnMhqiPlDHyzZfU5vss3o8aEQVGBMnVMjMh3yIfDtd7t7fQAbn8w6BEGoLJ7e35Av8c3BgO_e_llELGiLD6Ok6y4VJXFyfO9RgmBus=s0-d-e1-ft#http://thecloud.appirio.com/rs/921-UOU-112/images/Footer-RTB-Jul17.png" height="80px" width="100%"/>
+</apex:component>
