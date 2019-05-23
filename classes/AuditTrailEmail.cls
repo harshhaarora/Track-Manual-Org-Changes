@@ -12,7 +12,7 @@ global class AuditTrailEmail implements Database.Batchable<sObject>, Database.St
     global void finish(Database.BatchableContext bc){
         List<AuditTrailEmail__c> receiverEmails = new List<AuditTrailEmail__c>();
         receiverEmails = [Select id,SetupOwnerId  from AuditTrailEmail__c];
-        EmailTemplate et=[Select id from EmailTemplate where Name=:'audit trail'];
+        EmailTemplate et=[Select id, Name from EmailTemplate where Name=:'audit trail'];
 
         for(AuditTrailEmail__c em :  receiverEmails){
             Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
