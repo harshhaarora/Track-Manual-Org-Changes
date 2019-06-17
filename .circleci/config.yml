@@ -7,7 +7,7 @@ jobs:
       - run:
           name: validate
           command: adx
-                  'adx sort:check'
+          command: 'adx sort:check'
                   #'adx deploy:package --deploy.testLevel NoTestRun --target QA'
       - run:
           name: deploy
