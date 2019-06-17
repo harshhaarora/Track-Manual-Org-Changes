@@ -13,9 +13,9 @@ jobs:
       - run:
           name: deploy
           command: |
-            adx
-           'adx sort:check'
-           #'adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA'
+                  adx
+                  'adx sort:check'
+                  #'adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA'
 
 workflows:
   version: 2
