@@ -1,9 +1,11 @@
-version: 2.1
+version: 2.0
 jobs:
   build:
     docker:
       - image: appirio/dx-salesforce:latest
- steps:
+    steps:
       - run:
-          name: Test
-          command: adx
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
