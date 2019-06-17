@@ -6,12 +6,14 @@ jobs:
     steps:
       - run:
           name: validate
-          command: adx |
+          command: |
+                  adx
                   'adx sort:check'
                   #'adx deploy:package --deploy.testLevel NoTestRun --target QA'
       - run:
           name: deploy
-          command: adx
+          command: |
+            adx
            'adx sort:check'
            #'adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA'
 
