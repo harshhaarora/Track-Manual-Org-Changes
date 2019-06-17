@@ -7,7 +7,7 @@ jobs:
       - run:
           name: validate
           command: |
-          echo hello
+          echo 'hello'
           adx
           #adx
           #'adx sort:check'
