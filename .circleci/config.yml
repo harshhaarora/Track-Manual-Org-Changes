@@ -5,5 +5,37 @@ jobs:
       - image: appirio/dx-salesforce:latest
     steps:
       - run:
-          name: The First Step
-          command: adx
+          name: validate
+          command: |
+          adx sort:check
+          adx deploy:package --deploy.testLevel NoTestRun --target QA
+
+      - run:
+        name: deploy
+          command: |
+          adx sort:check
+          adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+             branches:
+              only:
+                - qa
+                - dev
+                - full
+                - master
+     # - deploy:
+      #    context: cmc-aws
+       #   requires:
+        #    - build
+         # filters:
+          #  branches:
+           #   only:
+            #    - qa
+             #   - dev
+              #  - full
+               # - master
