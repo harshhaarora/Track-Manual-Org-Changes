@@ -8,6 +8,7 @@ jobs:
           name: validate
           command: |
                   adx
+                  adx
                   'adx deploy:package --deploy.testLevel NoTestRun --target QA'
       - run:
           name: deploy
