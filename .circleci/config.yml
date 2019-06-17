@@ -7,14 +7,14 @@ jobs:
       - run:
           name: validate
           command: |
-          adx sort:check
-          adx deploy:package --deploy.testLevel NoTestRun --target QA
+          'adx sort:check'
+          'adx deploy:package --deploy.testLevel NoTestRun --target QA'
 
       - run:
         name: deploy
           command: |
-          adx sort:check
-          adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA
+          'adx sort:check'
+          'adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA'
 
 workflows:
   version: 2
