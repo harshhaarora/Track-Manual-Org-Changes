@@ -1,9 +1,9 @@
 version: 2.1
-
 jobs:
   build:
     docker:
       - image: appirio/dx-salesforce:latest
  steps:
       - run:
-          name: adx
+          name: Test
+          command: adx
