@@ -9,7 +9,7 @@ jobs:
           command: |
                   adx
                   pwd
-                  ls .circleci
+                  ls .config
                   echo 'hello '
                   adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
       - run:
