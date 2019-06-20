@@ -9,6 +9,7 @@ jobs:
           name: validate
           command: |
                   adx
+                  pwd
                   ls
                   echo 'hello '
                   adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
