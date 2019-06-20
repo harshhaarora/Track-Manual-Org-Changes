@@ -5,6 +5,8 @@
       "Micro Focus - Stack C | Data Migration"
     ]
   },
+  "continuousIntegrationType": "circleci",
+  "continuousIntegrationURL": "https://circleci.com",
   "projectType": [
     "legacy-salesforce"
   ],
