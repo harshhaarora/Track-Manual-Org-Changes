@@ -1,6 +1,7 @@
 version: 2.0
 jobs:
   build:
+    working_directory: ~/Track-Manual-Org-Changes
     docker:
       - image: appirio/dx-salesforce:latest
     steps:
