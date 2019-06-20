@@ -6,7 +6,7 @@
     ]
   },
   "continuousIntegrationType": "circleci",
-  "continuousIntegrationURL": "https://circleci.com",
+  "continuousIntegrationURL": "https://circleci.com/gh",
   "projectType": [
     "legacy-salesforce"
   ],
