@@ -7,10 +7,15 @@ jobs:
     steps:
       - run:
           name: validate
+          command: pwd
+      - run:
+          name: validate
+          command: ls
+      - run:
+          name: validate
           command: |
                   adx
                   pwd
-                  ls config
                   echo 'hello '
                   adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
       - run:
