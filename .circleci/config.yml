@@ -10,7 +10,7 @@ jobs:
           command: pwd
       - run:
           name: validate
-          command: ls
+          command: ls /home/node/Track-Manual-Org-Changes
       - run:
           name: validate
           command: |
