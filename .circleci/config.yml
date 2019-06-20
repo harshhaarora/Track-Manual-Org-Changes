@@ -8,6 +8,7 @@ jobs:
           name: validate
           command: |
                   adx
+                  ls
                   adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
       - run:
           name: deploy
