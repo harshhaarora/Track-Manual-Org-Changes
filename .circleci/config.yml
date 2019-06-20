@@ -5,12 +5,13 @@ jobs:
     docker:
       - image: appirio/dx-salesforce:latest
     steps:
+      - checkout
       - run:
           name: validate
           command: pwd
       - run:
           name: validate
-          command: ls /home/node/Track-Manual-Org-Changes
+          command: ls
       - run:
           name: validate
           command: |
