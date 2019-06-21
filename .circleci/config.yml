@@ -13,11 +13,16 @@ jobs:
           name: validate
           command: ls
       - run:
+          name: test
+          command: |
+                  value=$(<config/appirio.json)
+                  echo "$value"
+      - run:
           name: validate
           command: |
-                  adx
+                  adx -v
                   pwd
-                  echo 'hello '
+                  ls /config
                   adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
       - run:
           name: deploy
