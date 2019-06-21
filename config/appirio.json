@@ -5,8 +5,6 @@
       "Micro Focus - Stack C | Data Migration"
     ]
   },
-  "continuousIntegrationType": "gitlab",
-  "continuousIntegrationURL": "https://gitlab.appirio.com",
   "projectType": [
     "legacy-salesforce"
   ],
