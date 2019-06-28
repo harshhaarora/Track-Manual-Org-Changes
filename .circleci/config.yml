@@ -23,7 +23,7 @@ jobs:
                   adx -v
                   pwd
                   ls config
-                  adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
+                  adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://login.salesforce.com
       - run:
           name: deploy
           command: |
