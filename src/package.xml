@@ -6,16 +6,16 @@
     <name>ApexClass</name>
   </types>
   <types>
-        <members>AuditTrailEmailComponent</members>
-        <name>ApexComponent</name>
-    </types>
-   <types>
-        <members>audit_trail</members>
-        <name>EmailTemplate</name>
-    </types>
-    <types>
-        <members>AuditTrailEmail__c</members>
-        <name>CustomObject</name>
-    </types>
-  <version>42.0</version>
+    <members>AuditTrailEmailComponent</members>
+    <name>ApexComponent</name>
+  </types>
+  <types>
+    <members>audit_trail</members>
+    <name>EmailTemplate</name>
+  </types>
+  <types>
+    <members>AuditTrailEmail__c</members>
+    <name>CustomObject</name>
+  </types>
+  <version>45.0</version>
 </Package>
