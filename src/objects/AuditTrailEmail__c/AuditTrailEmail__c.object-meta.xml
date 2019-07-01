@@ -4,4 +4,5 @@
     <enableFeeds>false</enableFeeds>
     <label>Audit trail email</label>
     <visibility>Public</visibility>
+    <apiVersion>45.0</apiVersion>
 </CustomObject>
