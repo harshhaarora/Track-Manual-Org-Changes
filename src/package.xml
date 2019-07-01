@@ -14,7 +14,7 @@
     <name>EmailTemplate</name>
   </types>
   <types>
-    <members>AuditTrailEmail__c</members>
+    <members>AuditTrailEmail</members>
     <name>CustomObject</name>
   </types>
   <version>45.0</version>
