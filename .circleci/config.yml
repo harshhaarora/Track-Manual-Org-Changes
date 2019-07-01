@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/Track-Manual-Org-Changes
     docker:
-      - image: appirio/dx-salesforce:latest
+      - image: appiriodev/dx-cli-dev:1.2.9.61915
     steps:
       - checkout
       - run:
