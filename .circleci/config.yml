@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/Track-Manual-Org-Changes
     docker:
-      - image: appirio/dx-salesforce:latest
+      - image: appiriodev/dx-cli-dev:1.2.9.61915
     steps:
       - checkout
       - run:
@@ -23,13 +23,13 @@ jobs:
                   adx -v
                   pwd
                   ls config
-                  adx deploy:package --deploy.testLevel NoTestRun -u aroraharsh59@gmail.com -p appirio1 -s https://test.salesforce.com
+                  adx deploy:package --deploy.testLevel NoTestRun -t QA
       - run:
           name: deploy
           command: |
                   adx
-                  'adx sort:check'
-                  #'adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA'
+                  adx sort:check
+                  adx deploy:package --deploy.testLevel RunLocalTests --deploy.checkOnly false --target QA
 
 workflows:
   version: 2
