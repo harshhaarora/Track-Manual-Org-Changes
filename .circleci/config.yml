@@ -5,6 +5,9 @@ jobs:
     docker:
       - image: appiriodev/dx-cli-dev:1.2.9.61915
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "31:dd:c6:19:d2:06:b1:20:7e:d1:f0:fe:73:c6:63:a3"
       - checkout
       - run:
           name: validate
