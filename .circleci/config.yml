@@ -3,7 +3,8 @@ jobs:
   build:
     working_directory: ~/Track-Manual-Org-Changes
     docker:
-      - image: appiriodev/dx-cli-dev:1.2.9.61915
+      - image: appiriodev/dx-cli-dev:latest
+
     steps:
       - add_ssh_keys:
           fingerprints:
